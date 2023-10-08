@@ -41,7 +41,9 @@ class Rocket {
     if (json['engines'] != null && json['engines']['number'] != null) {
       engineCount = json['engines']['number'];
     }
-    flickrImages = json['flickr_images'].cast<String>();
+    if (json['flickr_images'] != null) {
+      flickrImages = json['flickr_images'].cast<String>();
+    }
     name = json['name'];
     type = json['type'];
     active = json['active'];
